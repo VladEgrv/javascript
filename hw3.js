@@ -8,7 +8,7 @@
 
 const arrayOfNumbers = [];
 
-function addNumber(number, array) {
+function addNumber(number, array = arrayOfNumbers) {
     if (!Array.isArray(array)) {
         throw new Error("Объект должен являться массивом");
     }
@@ -19,7 +19,7 @@ function addNumber(number, array) {
     console.log(`Число ${number} добавлено в массив`);
 }
 
-function analyzeNumbers(array) {
+function analyzeNumbers(array = arrayOfNumbers) {
     if (!Array.isArray(array) || !array.every(Number.isFinite)) {
         throw new Error("Переданный объект не является массивом или состоит не только из чисел");
     }
@@ -43,7 +43,7 @@ function analyzeNumbers(array) {
     console.log(`Массив имеет ${counterPositive} положительных чисел, ${counterNegative} отрицательных чисел и ${counterZeros} нулей`);
 }
 
-function calculateAverage(array) {
+function calculateAverage(array = arrayOfNumbers) {
     if (!Array.isArray(array) || !array.every(Number.isFinite) || array.length === 0) {
         throw new Error("Переданный объект должен быть не пустым массивом и состоять только из чисел");
     }
