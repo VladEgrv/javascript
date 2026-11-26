@@ -37,11 +37,3 @@ function analyzeNumbers(array) {
     }
     console.log(`Массив имеет ${counterPositive} положительных чисел, ${counterNegative} отрицательных чисел и ${counterZeros} нулей`);
 }
-
-
-addNumber(10, arrayOfNumbers);
-addNumber(-5, arrayOfNumbers);
-addNumber(0, arrayOfNumbers);
-addNumber(25, arrayOfNumbers);
-
-analyzeNumbers(arrayOfNumbers);
